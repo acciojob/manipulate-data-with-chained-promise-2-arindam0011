@@ -2,24 +2,18 @@
 let input=prompt("Give an array:");
 input = input.replace(/[\[\]\ \,]/g, "");
 
-console.log(input);
-let arr= input.split('');
-let odd=[];
-let even=[];
 
-for(let i=0; i<arr.length; i++){
-if(arr[i]%2==0){
-		even.push(arr[i]);
-	}
-	else{
-		odd.push(arr[i]);
-	}
-	
-}
+let arr= input.split('');
+
 const output=document.getElementById("output");
+
 setTimeout(()=>{
+	
+		setTimeout(()=>{
+			let even= arr.filter(val=>val%2==0).map(eachVal=>eachVal*2);
+					output.innerText=even;
+			}, 2000);
+	
+	let odd= arr.filter(val=>val==1||val%2!=0)
 	output.innerText=odd;
-}, 1000);
-setTimeout(()=>{
-	output.innerText=even;
-}, 2000)
+}, 1000)
