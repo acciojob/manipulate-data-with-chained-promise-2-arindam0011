@@ -1,17 +1,20 @@
 //your JS code here. If required.
 let input=prompt("Give an array:");
-let arr= [];
-	input.split(',').forEach(val=>arr.push(parseInt(val)));
+input = input.replace(/[\[\]\ \,]/g, "");
+
+console.log(input);
+let arr= input.split('');
 let odd=[];
 let even=[];
 
 for(let i=0; i<arr.length; i++){
-	if(arr[i]%2==0){
+if(arr[i]%2==0){
 		even.push(arr[i]);
 	}
-	else if(arr[i]%2!=0){
+	else{
 		odd.push(arr[i]);
 	}
+	
 }
 const output=document.getElementById("output");
 setTimeout(()=>{
