@@ -2,7 +2,6 @@
 let input=prompt("Give an array:");
 input = input.replace(/[\[\]\ \,]/g, "");
 
-
 let arr= input.split('');
 
 const output=document.getElementById("output");
