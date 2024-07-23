@@ -1,4 +1,4 @@
-let input = prompt("Give an array:");
+// let input = prompt("Give an array:");
 
 if(input){
 input = input.replace(/[\[\]\s]/g, "");
@@ -16,7 +16,7 @@ promise
 .then((even)=>{
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
-		output.innerText=even;
+		output.innerText=even.join(',');
 		let mul=even.map(val => val * 2);
 		resolve(mul);
 	},1000)
@@ -25,7 +25,7 @@ promise
 .then((mul)=>{
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
-		output.innerText=mul;
+		output.innerText=mul.join(',');
 			resolve();
 	},2000)
 	});
