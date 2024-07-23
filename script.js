@@ -16,17 +16,24 @@ let promise=new Promise((resolve, reject)=>{
 promise
 .then((even)=>{
 	let mul= [];
+	new Promise((resolve)=>{
+		
 	setTimeout(()=>{
 		output.innerText=even;
 		even.forEach((val)=>mul.push(val*2));
 	},1000)
+	
+})
 	return mul;
 })
 .then((mul)=>{
-	setTimeout(()=>{
+	new Promise((resolve)=>{
+		setTimeout(()=>{
 		output.innerText=mul;
 	},2000)
 	})
+	
+})
 
 
 }
