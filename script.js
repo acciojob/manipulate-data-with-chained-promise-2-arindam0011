@@ -1,4 +1,4 @@
-// let input = prompt("Give an array:");
+let input = prompt("Give an array:");
 
 if(input){
 input = input.replace(/[\[\]\s]/g, "");
