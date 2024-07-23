@@ -25,7 +25,7 @@ promise
 .then((mul)=>{
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
-		output.innerText=mul;
+		output.innerText+=","+mul;
 			resolve();
 	},2000)
 	});
