@@ -1,4 +1,6 @@
 let input = prompt("Give an array:");
+
+if(input){
 input = input.replace(/[\[\]\s]/g, ""); // Remove brackets and spaces
 
 // Split input string into an array of numbers
@@ -27,3 +29,4 @@ promise
 	})
 
 
+}
