@@ -14,20 +14,18 @@ let promise=new Promise((resolve, reject)=>{
 });
 promise
 .then((even)=>{
-	new Promise((resolve)=>{
-		let mul= [];
-		
+	return new Promise((resolve)=>{
 		setTimeout(()=>{
-		output.innerText=even.join(,);
-		even.forEach((val)=>mul.push(val*2));
+		output.innerText=even;
+		let mul=even.map(val => val * 2);
 		resolve(mul);
 	},1000)
 });
 })
 .then((mul)=>{
-	new Promise((resolve)=>{
+	return new Promise((resolve)=>{
 		setTimeout(()=>{
-		output.innerText=mul.join(,);
+		output.innerText=mul;
 			resolve();
 	},2000)
 	});
