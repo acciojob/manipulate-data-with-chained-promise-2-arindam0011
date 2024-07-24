@@ -4,13 +4,16 @@ if(input){
 input = input.replace(/[\[\]\s]/g, "");
 
 let arr = input.split(',').map(val => parseInt(val, 10)); 
-let even= arr.filter((val)=> val%2==0);
+
 
 const output = document.getElementById("output");
 
 
 let promise=new Promise((resolve, reject)=>{
-	resolve(even);
+setTimeout(() => {
+    let even = arr.filter(val => val % 2 == 0);
+    resolve(even);
+  }, 3000);
 });
 promise
 .then((even)=>{
