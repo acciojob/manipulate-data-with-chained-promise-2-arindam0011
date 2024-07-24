@@ -22,13 +22,13 @@ promise
 	},1000)
 });
 })
-// .then((mul)=>{
-// 	return new Promise((resolve)=>{
-// 		setTimeout(()=>{
-// 		output.innerText=mul.join(',');
-// 			resolve();
-// 	},2000)
-// 	});
-// })
+.then((mul)=>{
+	return new Promise((resolve)=>{
+		setTimeout(()=>{
+		output.innerText=mul.join(',');
+			resolve();
+	},2000)
+	});
+})
 }
  
