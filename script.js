@@ -1,26 +1,25 @@
 let input = prompt("Give an array:");
 
-
 if(input){
     input = input.replace(/[\[\]\s]/g, "");
-    
+    let arr = input.split(',').map(val => parseInt(val, 10)); 
     const output = document.getElementById("output");
-	let arr = input.split(',').map(val => parseInt(val, 10)); 
-    let even = arr.filter((val) => val % 2 == 0);
-	let mul = even.map(val => val * 2);
+
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            output.innerText = even;
+            let even = arr.filter((val) => val % 2 == 0);
+            output.innerText = even.join(',');
+            let mul = even.map(val => val * 2);
             resolve(mul);
-        }, 3000);
+        }, 1000); // Adjusted the timing here
     });
 
     promise.then((mul) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                output.innerText = mul;
+                output.innerText = mul.join(',');
                 resolve();
-            }, 2000)
+            }, 2000) // And here
         });
     })
 }
