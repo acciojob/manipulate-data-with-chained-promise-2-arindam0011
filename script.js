@@ -1,5 +1,6 @@
 let input = prompt("Give an array:");
 
+
 if(input){
     input = input.replace(/[\[\]\s]/g, "");
     
@@ -11,7 +12,7 @@ if(input){
         setTimeout(() => {
             output.innerText = even;
             resolve(mul);
-        }, 1000);
+        }, 3000);
     });
 
     promise.then((mul) => {
