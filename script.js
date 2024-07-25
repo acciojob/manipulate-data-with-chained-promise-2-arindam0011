@@ -2,14 +2,14 @@ let input = prompt("Give an array:");
 
 if(input){
     input = input.replace(/[\[\]\s]/g, "");
-    let arr = input.split(',').map(val => parseInt(val, 10)); 
+    
     const output = document.getElementById("output");
-
+	let arr = input.split(',').map(val => parseInt(val, 10)); 
+    let even = arr.filter((val) => val % 2 == 0);
+	let mul = even.map(val => val * 2);
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            let even = arr.filter((val) => val % 2 == 0);
             output.innerText = even.join(',');
-            let mul = even.map(val => val * 2);
             resolve(mul);
         }, 1000);
     });
