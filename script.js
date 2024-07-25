@@ -40,5 +40,3 @@ if (input) {
             console.error("An error occurred:", error);
         });
 }
-
-
