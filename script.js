@@ -9,7 +9,7 @@ if(input){
 	let mul = even.map(val => val * 2);
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            output.innerText = even.join(',');
+            output.innerText = even;
             resolve(mul);
         }, 1000);
     });
@@ -17,7 +17,7 @@ if(input){
     promise.then((mul) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                output.innerText = mul.join(',');
+                output.innerText = mul;
                 resolve();
             }, 2000)
         });
