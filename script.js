@@ -9,8 +9,9 @@ if (input) {
     // Function that returns a promise resolving with the array after 3 seconds
     let getNumbers = () => {
         return new Promise((resolve) => {
+            setTimeout(() => {
                 resolve(arr);
-          
+            }, 3000); // 3 seconds delay
         });
     };
 
